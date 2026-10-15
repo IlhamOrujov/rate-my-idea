@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "rate-my-idea",
+  "description": "Claude rates every request 1 to 10 and says whether it would do it if the product were its own.",
+  "owner": {
+    "name": "Ilham Orujov",
+    "url": "https://github.com/IlhamOrujov"
+  },
+  "plugins": [
+    {
+      "name": "rate-my-idea",
+      "description": "Claude rates every request 1 to 10 and says whether it would do it if the product were its own.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

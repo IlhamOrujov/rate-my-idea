@@ -1,0 +1,26 @@
+{
+  "name": "rate-my-idea",
+  "version": "1.0.0",
+  "description": "Claude rates every request you make from 1 to 10 and says whether it would do it if the product were its own. Honest product judgment next to the work, not just compliance.",
+  "author": {
+    "name": "Ilham Orujov",
+    "url": "https://github.com/IlhamOrujov"
+  },
+  "homepage": "https://github.com/IlhamOrujov/rate-my-idea",
+  "repository": "https://github.com/IlhamOrujov/rate-my-idea",
+  "license": "MIT",
+  "keywords": ["feedback", "product", "judgment", "rating", "honesty"],
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ \"$RATE_MY_IDEA\" = off ] && exit 0; printf '%s' '{\"hookSpecificOutput\":{\"hookEventName\":\"UserPromptSubmit\",\"additionalContext\":\"rate-my-idea is on: if this message asks you to do, build, change or decide something, add one line to your reply (top or bottom): Rating N/10, whether you would do it if the product were yours, and the one-line reason. Be honest, disagree when you would, then still do the task unless it is unsafe. Skip it for plain questions and small talk.\"}}'",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

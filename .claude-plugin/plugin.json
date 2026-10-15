@@ -1,6 +1,6 @@
 {
   "name": "rate-my-idea",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Claude rates every request you make from 1 to 10 and says whether it would do it if the product were its own. Honest product judgment next to the work, not just compliance.",
   "author": {
     "name": "Ilham Orujov",
@@ -9,7 +9,13 @@
   "homepage": "https://github.com/IlhamOrujov/rate-my-idea",
   "repository": "https://github.com/IlhamOrujov/rate-my-idea",
   "license": "MIT",
-  "keywords": ["feedback", "product", "judgment", "rating", "honesty"],
+  "keywords": [
+    "feedback",
+    "product",
+    "judgment",
+    "rating",
+    "honesty"
+  ],
   "hooks": {
     "UserPromptSubmit": [
       {
